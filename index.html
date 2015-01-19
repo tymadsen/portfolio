@@ -3,13 +3,11 @@
 <head>
   <style>
     #header, #content{
-      /*background: rgb(59, 157, 222);*/
-      /*color: white;*/
+      padding: 10px;
       text-align: center;
-      /*font: 2em monospace;*/
     }
     #mylink-pane, #fish-pane{
-      padding: 60px 1.66667em 120px;
+      padding: 25% 1.66667em;
     }
     #footer{
       color: white;
@@ -17,7 +15,7 @@
     #content{
       height: 70%;
     }
-    .panes, .pane, .pane-content{
+    .panes, .pane{
       height: 100%;
     }
     .panes{
@@ -32,29 +30,27 @@
       text-transform: uppercase;
     }
     .button{
-      border: 1px solid #4fbcb4;
+      border: 1px solid rgba(41, 142, 200, 0.61);;
       border-width: 1px 0;
       border-top-color: rgba(255,255,255,0.45);
+      border-radius: 2px;
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
       padding: 12px 24px;
-      transition: background-color 300ms ease-out;
-      background-color: #74cac4;
+      background-color: rgba(9, 93, 169, 0.44);
       color: #fff;
       transition: background-color 300ms ease-out;
     }
     .pane-content{
       width: 49.8%;
+      height: 99.5%;
       float: left;
       background-color: gainsboro;
       margin: 1px;
     }
     header{
       height: 10%;
-    }
-    footer{
-      height: 20%;
     }
     a{
       color: inherit;
@@ -63,7 +59,7 @@
     body{
       background: rgba(255, 255, 255, .2);
       margin: 0px;
-      font-family: Lato,Calibri,Verdana,Arial,sans-serif;
+      font-family: Lato,sans-serif;
     }
     html{
       background: #272727;
@@ -80,12 +76,10 @@
       float: left;
     }
     footer{
-      position: relative;
-      /*float: left;*/
-      padding: 0px 10px;
-      /*margin: 0% 2%;*/
-      /*left: 30%;*/
-      text-align: left;
+      height: 20%;
+      /*position: relative;*/
+      /*padding: 0px 10px;*/
+      /*text-align: left;*/
       font-size: 14px;
     }
   </style>
@@ -97,7 +91,7 @@
     <div id="content">
       <div class="panes">
         <div class="pane">
-          <section class="pane-content">
+          <div class="pane-content">
             <div id="mylink-pane">
               <h2>mYLink</h2>
               <p>To see an example of the work I have done on mYLink go to the following page and log in using the following credentials:</p>
@@ -110,28 +104,28 @@
                 <a class="button" target="_blank" href="http://mylink.byu.edu">mYLink</a>
               </p>
             </div>
-          </section>
-          <section class="pane-content">
+          </div>
+          <div class="pane-content">
             <div id="fish-pane">
               <h2>Fish Products</h2>
               <p>To see an example of a website redesign I did with my brother click on the following links:</p>
-              <p class="read-more-bar">
+              <p>
                 <a target="_blank" class="button" href="http://www.fishproducts.com/">Fish Products (Old)</a>
                 <a target="_blank" class="button" href="http://tymadsen.github.io/fishproducts/">Fish Products (Redesigned)</a>
                 <p>It is mobile friendly too, so try it on your smartphone!</p>
                 <p>Unfortunately the guys over at Fish Products didn't want the redesign we did for free.</p>
               </p>
             </div>
-          </section>
+          </div>
         </div>
       </div>  
     </div>
 
     <footer id="footer">
       <div class="row">
-        <section id="text-4" class="widget widget_text">
-          <h4 class="widget-title">Contact</h4>
-          <div class="textwidget">
+        <section>
+          <h4>Contact</h4>
+          <div>
             <address>
               <p>Email: <a href="mailto:ty.a.madsen@gmail.com">ty.a.madsen@gmail.com</a></p>
               <p>Ph: (208) 821-6991</p>
@@ -139,13 +133,13 @@
           </div>
         </section>
 
-        <section id="nav_menu-3" class="widget widget_nav_menu">
+        <section>
           <h4 class="widget-title">Follow</h4>
-          <div class="menu-social-media-container">
-            <ul id="menu-social-media" class="menu">
-              <li id="menu-item-4306" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4306"><a target="_blank" href="https://www.facebook.com/ty.madsen.92">Facebook</a></li>
-              <li id="menu-item-4307" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4307"><a target="_blank" href="https://www.linkedin.com/profile/view?id=376143800">LinkedIn</a></li>
-              <li id="menu-item-4308" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4308"><a target="_blank" href="https://plus.google.com/108578233841743138433">Google+</a></li>
+          <div>
+            <ul class="menu">
+              <li><a target="_blank" href="https://www.facebook.com/ty.madsen.92">Facebook</a></li>
+              <li><a target="_blank" href="https://www.linkedin.com/profile/view?id=376143800">LinkedIn</a></li>
+              <li><a target="_blank" href="https://plus.google.com/108578233841743138433">Google+</a></li>
             </ul>
           </div>
         </section>
