@@ -5,15 +5,17 @@
     #header, #content{
       padding: 10px;
       text-align: center;
+      background-color: rgba(255,255,255,.2);
     }
     #mylink-pane, #fish-pane{
-      padding: 25% 1.66667em;
+      margin: 25% 1.66667em;
     }
     #footer{
       color: white;
     }
     #content{
       height: 70%;
+      /*max-height: 600px;*/
     }
     .panes, .pane{
       height: 100%;
@@ -24,9 +26,9 @@
     .row{
       height: 100%;
       position: relative;
-      left: 30%
+      left: 22%
     }
-    .widget-title{
+    .footer-title{
       text-transform: uppercase;
     }
     .button{
@@ -38,7 +40,7 @@
       text-decoration: none;
       display: inline-block;
       padding: 12px 24px;
-      background-color: rgba(9, 93, 169, 0.44);
+      background-color: rgba(52, 146, 190, 0.7);
       color: #fff;
       transition: background-color 300ms ease-out;
     }
@@ -47,22 +49,30 @@
       height: 99.5%;
       float: left;
       background-color: gainsboro;
-      margin: 1px;
+      margin: .1%;
     }
     header{
       height: 10%;
+      color: rgba(39,176,240,.7);
+      max-height: 100px;
+      min-height: 50px;
     }
     a{
       color: inherit;
       text-decoration: underline;
     }
     body{
-      background: rgba(255, 255, 255, .2);
+      /*background: rgba(255, 255, 255, .2);*/
+      color: rgba(82, 82, 82, 1);
       margin: 0px;
       font-family: Lato,sans-serif;
     }
     html{
       background: #272727;
+      overflow: hidden; 
+      width: 100%;
+      height: 100%;
+      /*min-width: 1015px;*/
     }
     ul{
       padding: 0px;
@@ -94,7 +104,7 @@
           <div class="pane-content">
             <div id="mylink-pane">
               <h2>mYLink</h2>
-              <p>To see an example of the work I have done on mYLink go to the following page and log in using the following credentials:</p>
+              <p>An example of the work I have done on mYLink. Log in using the following credentials:</p>
               
               <label>NetID: tcwell</label>
               <br>
@@ -108,7 +118,7 @@
           <div class="pane-content">
             <div id="fish-pane">
               <h2>Fish Products</h2>
-              <p>To see an example of a website redesign I did with my brother click on the following links:</p>
+              <p>An example of a website redesign I did with my brother:</p>
               <p>
                 <a target="_blank" class="button" href="http://www.fishproducts.com/">Fish Products (Old)</a>
                 <a target="_blank" class="button" href="http://tymadsen.github.io/fishproducts/">Fish Products (Redesigned)</a>
@@ -124,7 +134,7 @@
     <footer id="footer">
       <div class="row">
         <section>
-          <h4>Contact</h4>
+          <h4 class="footer-title">Contact</h4>
           <div>
             <address>
               <p>Email: <a href="mailto:ty.a.madsen@gmail.com">ty.a.madsen@gmail.com</a></p>
@@ -134,12 +144,22 @@
         </section>
 
         <section>
-          <h4 class="widget-title">Follow</h4>
+          <h4 class="footer-title">Follow</h4>
           <div>
             <ul class="menu">
               <li><a target="_blank" href="https://www.facebook.com/ty.madsen.92">Facebook</a></li>
               <li><a target="_blank" href="https://www.linkedin.com/profile/view?id=376143800">LinkedIn</a></li>
               <li><a target="_blank" href="https://plus.google.com/108578233841743138433">Google+</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h4 class="footer-title">Github</h4>
+          <div>
+            <ul>
+              <li><a target="_blank" href="http://github.com/tymadsen/">Repositories</a></li>
+              <li></li>
             </ul>
           </div>
         </section>
