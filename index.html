@@ -3,42 +3,154 @@
 <head>
   <style>
     #header, #content{
-      background: rgb(59, 157, 222);
+      /*background: rgb(59, 157, 222);*/
       /*color: white;*/
       text-align: center;
-      font: 2em monospace;
+      /*font: 2em monospace;*/
+    }
+    #mylink-pane, #fish-pane{
+      padding: 60px 1.66667em 120px;
+    }
+    #footer{
+      color: white;
+    }
+    #content{
+      height: 70%;
+    }
+    .panes, .pane, .pane-content{
+      height: 100%;
+    }
+    .panes{
+      background-color: whitesmoke;
+    }
+    .row{
+      height: 100%;
+      position: relative;
+      left: 30%
+    }
+    .widget-title{
+      text-transform: uppercase;
+    }
+    .button{
+      border: 1px solid #4fbcb4;
+      border-width: 1px 0;
+      border-top-color: rgba(255,255,255,0.45);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      padding: 12px 24px;
+      transition: background-color 300ms ease-out;
+      background-color: #74cac4;
+      color: #fff;
+      transition: background-color 300ms ease-out;
+    }
+    .pane-content{
+      width: 49.8%;
+      float: left;
+      background-color: gainsboro;
+      margin: 1px;
+    }
+    header{
+      height: 10%;
+    }
+    footer{
+      height: 20%;
+    }
+    a{
+      color: inherit;
+      text-decoration: underline;
     }
     body{
-      background: rgb(56, 120, 150);
+      background: rgba(255, 255, 255, .2);
+      margin: 0px;
+      font-family: Lato,Calibri,Verdana,Arial,sans-serif;
+    }
+    html{
+      background: #272727;
+    }
+    ul{
+      padding: 0px;
+      list-style-type: none;
+    }
+    div .row{
+      text-align: center;
+    }
+    section{
+      width: 25%;
+      float: left;
+    }
+    footer{
+      position: relative;
+      /*float: left;*/
+      padding: 0px 10px;
+      /*margin: 0% 2%;*/
+      /*left: 30%;*/
+      text-align: left;
+      font-size: 14px;
     }
   </style>
 </head>
   <body>
-    <div id="header">
-      <h3>Welcome to my Github Portfolio!</h3>  
-    </div>
+    <header id="header">
+      <h1>Welcome to my Github Portfolio!</h1>
+    </header>
     <div id="content">
-      <p>
-      To see an example of the work I have done on mYLink go to the following page and log in using the following credentials:
-      <br>
-      <label>NetID: tcwell</label>
-      <br>
-      <label>Password: mylinktest1234</label>
-      <br>
-      <a target="_blank" href="http://mylink.byu.edu">mYLink</a>
-      <br>
-      </p>
-      <hr>
-      <p>
-        To see an example of a website redsign I did with my brother click on the following links:
-        <br>
-        <span>Current site: (Unfortunately the guys over at Fish Products didn't want the redesign we did for free) - </span>
-        <a target="_blank" href="http://www.fishproducts.com/">Fish Products (Old)</a>
-        <br>
-        <a target="_blank" href="http://tymadsen.github.io/fishproducts/">Fish Products (Redesigned)</a> - 
-        <span>It is mobile friendly too, so try it on your smartphone!</span>
-      </p>  
+      <div class="panes">
+        <div class="pane">
+          <section class="pane-content">
+            <div id="mylink-pane">
+              <h2>mYLink</h2>
+              <p>To see an example of the work I have done on mYLink go to the following page and log in using the following credentials:</p>
+              
+              <label>NetID: tcwell</label>
+              <br>
+              <label>Password: mylinktest1234</label>
+              <br>
+              <p class="read-more-bar">
+                <a class="button" target="_blank" href="http://mylink.byu.edu">mYLink</a>
+              </p>
+            </div>
+          </section>
+          <section class="pane-content">
+            <div id="fish-pane">
+              <h2>Fish Products</h2>
+              <p>To see an example of a website redesign I did with my brother click on the following links:</p>
+              <p class="read-more-bar">
+                <a target="_blank" class="button" href="http://www.fishproducts.com/">Fish Products (Old)</a>
+                <a target="_blank" class="button" href="http://tymadsen.github.io/fishproducts/">Fish Products (Redesigned)</a>
+                <p>It is mobile friendly too, so try it on your smartphone!</p>
+                <p>Unfortunately the guys over at Fish Products didn't want the redesign we did for free.</p>
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>  
     </div>
+
+    <footer id="footer">
+      <div class="row">
+        <section id="text-4" class="widget widget_text">
+          <h4 class="widget-title">Contact</h4>
+          <div class="textwidget">
+            <address>
+              <p>Email: <a href="mailto:ty.a.madsen@gmail.com">ty.a.madsen@gmail.com</a></p>
+              <p>Ph: (208) 821-6991</p>
+            </address>
+          </div>
+        </section>
+
+        <section id="nav_menu-3" class="widget widget_nav_menu">
+          <h4 class="widget-title">Follow</h4>
+          <div class="menu-social-media-container">
+            <ul id="menu-social-media" class="menu">
+              <li id="menu-item-4306" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4306"><a target="_blank" href="https://www.facebook.com/ty.madsen.92">Facebook</a></li>
+              <li id="menu-item-4307" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4307"><a target="_blank" href="https://www.linkedin.com/profile/view?id=376143800">LinkedIn</a></li>
+              <li id="menu-item-4308" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4308"><a target="_blank" href="https://plus.google.com/108578233841743138433">Google+</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </footer>
     
   </body>
 </html>
