@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#starCanvas{
+			background-color: gray;
+		}
+	</style>
+</head>
+<body>
+	<label for="pts">Points</label>
+	<input type="number" name="pts" id="pts">
+	<br>
+	<label for="dia">Diameter</label>
+	<input type="number" name="dia" id="dia" placeholder="pixels">
+	<br>
+	<label for="innerPt">Ratio of outer radius to inner point</label>
+	<input type="number" name="innerPt" id="innerPt">
+	<br>
+	<label for="innerStarRadius">Ratio of outer radius to inner star radius</label>
+	<input type="number" name="innerStarRadius" id="innerStarRadius">
+	<br>
+	<button type="button" onclick="drawStar()">Draw the Star</button>
+	<br>
+	<canvas id="starCanvas"></canvas>
+</body>
+<script type="text/javascript">
+
+	function drawStar(d, p, iP, iSR){
+		var dia = d || document.getElementById("dia").value;
+		var pts = p || document.getElementById("pts").value;
+		var innerPoint = iP || document.getElementById("innerPt").value;
+		var innerStarRadius = iSR || document.getElementById("innerStarRadius").value;
+		var height = dia;
+		var width = height;
+		var radius = height/2;
+		var points = pts;
+		var offset = Math.PI/points;
+
+		var c = document.getElementById("starCanvas");
+		c.height = height;
+		c.width = width;
+		var ctx = c.getContext("2d");
+
+		ctx.translate(radius, radius);
+		// radius = radius * 0.90;
+		ctx.arc(0, 0, radius, 0 , 2*Math.PI);
+	  ctx.fillStyle = "white";
+	  ctx.fill();
+
+	  ctx.beginPath();
+	  ctx.lineWidth = 1;
+	  ctx.lineCap = "round";
+	  for (var i = 0; i < points; i++) {
+	  	var pos = i*2*Math.PI/points;
+		  ctx.moveTo(0,0);
+		  ctx.rotate(pos);
+		  ctx.lineTo(0, -radius);
+		  ctx.rotate(-offset);
+		  ctx.lineTo(0, -radius/innerPoint);
+		  ctx.rotate(offset);
+		  
+		  //inner star
+		  ctx.lineTo(0,-radius/innerStarRadius);
+		  ctx.rotate(offset);
+		  ctx.lineTo(0,-radius/innerPoint);
+		  ctx.rotate(-offset);
+		  //end inner star
+
+		  ctx.moveTo(0, -radius);
+		  ctx.rotate(offset);
+		  // ctx.rotate(offset);
+		  ctx.lineTo(0, -radius/innerPoint);
+		  ctx.lineTo(0, 0);
+		  ctx.stroke();
+		  ctx.rotate(-pos-offset);
+	  };
+	}
+
+	drawStar(500, 7, 3, 1.75);
+
+</script>
+</html>
