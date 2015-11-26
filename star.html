@@ -16,10 +16,12 @@
 	<input type="number" name="dia" id="dia" placeholder="pixels">
 	<br>
 	<label for="innerPt">Ratio of outer radius to inner point</label>
-	<input type="number" name="innerPt" id="innerPt">
+	<!-- <input type="number" name="innerPt" id="innerPt"> -->
+	<input type="range" max="50" min="10" name="innerPt" id="innerPt">
 	<br>
 	<label for="innerStarRadius">Ratio of outer radius to inner star radius</label>
-	<input type="number" name="innerStarRadius" id="innerStarRadius">
+	<!-- <input type="number" name="innerStarRadius" id="innerStarRadius"> -->
+	<input type="range" max="20" min="10" name="innerStarRadius" id="innerStarRadius">
 	<br>
 	<button type="button" onclick="drawStar()">Draw the Star</button>
 	<br>
@@ -28,10 +30,10 @@
 <script type="text/javascript">
 
 	function drawStar(d, p, iP, iSR){
-		var dia = d || document.getElementById("dia").value;
-		var pts = p || document.getElementById("pts").value;
-		var innerPoint = iP || document.getElementById("innerPt").value;
-		var innerStarRadius = iSR || document.getElementById("innerStarRadius").value;
+		var dia = d || document.getElementById("dia").value || 500;
+		var pts = p || document.getElementById("pts").value || 7;
+		var innerPoint = iP || document.getElementById("innerPt").value/10 || 3;
+		var innerStarRadius = iSR || document.getElementById("innerStarRadius").value/10 || 1.75;
 		var height = dia;
 		var width = height;
 		var radius = height/2;
@@ -78,7 +80,12 @@
 	  };
 	}
 
-	drawStar(500, 7, 3, 1.75);
+	drawStar();
+
+	document.getElementById("dia").addEventListener("change", function(ev){drawStar()});
+	document.getElementById("pts").addEventListener("change", function(ev){drawStar()});
+	document.getElementById("innerPt").addEventListener("change", function(ev){drawStar()});
+	document.getElementById("innerStarRadius").addEventListener("change", function(ev){drawStar()});
 
 </script>
 </html>
